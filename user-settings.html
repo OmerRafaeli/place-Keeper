@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Keeper - Settings</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onGetUserInfo()">
+    <h1>User Settings</h1>
+    <form class="user-settings" onsubmit="onSetUserSettings()">
+        <section>
+            <label for="user-name">Name &nbsp&nbsp</label>
+            <input type="text" class="user-name" placeholder="Insert Your Name Here" required>
+        </section>
+
+        <section>
+            <label for="email">E-Mail &nbsp&nbsp</label>
+            <input type="email" class="email" placeholder="john@example.com" required>
+        </section>
+
+        <section>
+            <label for="range">Age: <span class="age-num">0</span> &nbsp&nbsp</label>
+            <input class="age" type="range" min="18" max="120" oninput="onSetAge(this.value)">
+        </section>
+
+        <h4>-Colors-</h4>
+
+        <section>
+            <label for="bg-color" >Set Background Color &nbsp&nbsp</label>
+            <input type="color" class="bg-color" name="bg-color" onchange="onGetAppColor(this.name, value)">
+        </section>
+
+        <section>
+            <label for="txt-color">Set Text Color &nbsp&nbsp</label>
+            <input type="color" class="txt-color" name="txt-color" onchange="onGetAppColor(this.name, value)">
+        </section>
+
+        <section>
+            <label for="date">Birth Date &nbsp&nbsp</label>
+            <input type="date" class="date" onchange="onChangeDate(value)">
+        </section>
+
+        <section>
+            <label for="time">Birth Time &nbsp&nbsp</label>
+            <input type="time" class="time" onchange="onChangeTime(value)">
+        </section>
+
+        <button onclick="onSaveUserInfo(event)">Set</button>
+        <button onclick="onReturnToMain(event)">Return</button>
+    </form>    
+    <script src="js/service/storageService.js"></script>
+    <script src="js/service/userService.js"></script>
+    <script src="js/main.controller.js"></script>
+</body>
+
+</html>

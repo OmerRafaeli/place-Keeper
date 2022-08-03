@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+}
+button{
+    display: block;
+}
+video{
+    width: 360px;
+}
+
+form{
+    background-color: yellow;
+    transform: translate(30%);
+    width: 350px;
+    padding: 1px;
+}
+
+section{
+    height: 35px;
+    margin: 25px;
+    background-color: rgb(229, 194, 68);
+    box-shadow: 1px 2px 4px 1px black;
+    padding-top: 15px;
+}
+
+/* section:hover{
+    box-shadow: inset -1px 1px 0px 0px black;
+} */
