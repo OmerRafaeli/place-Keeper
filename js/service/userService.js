@@ -1,3 +1,6 @@
+'use strict'
+
+
 const STORAGE_USERKEY = 'userData'
 
 let gUserData = {
@@ -95,6 +98,8 @@ function getBday(){
     }
     diff = bday.getTime()-today.getTime();
     days = Math.floor(diff/(1000*60*60));
+
+    if(days === NaN) alert('Please Head To Settings Tab For Basic')
     alert(`${days} hours until ${currUserData.name}'s birthday!`);
 }
 

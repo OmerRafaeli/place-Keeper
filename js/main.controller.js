@@ -15,3 +15,7 @@ function greetUser(){
         document.querySelector('.welcome-site-name').innerText = `Welcome ${storedUserInfo.name} To Place Keeper`
     }
 }
+
+function onReturnToMyLocation(){
+    getPosition()
+}

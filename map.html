@@ -8,13 +8,34 @@
     <title>Place Keeper - My Map</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <h3>My Google Maps Demo</h3>
+<body onload="initMap()">
+    <h3>Place Keeper - Omer Rafaeli</h3>
     <!--The div element for the map -->
     <div id="map"></div>
-
+    
+    <table border="1">
+        <tr>
+            <td>Latitude</td>
+            <td id="latitude"></td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td id="longitude"></td>
+        </tr>
+        <tr>
+            <td>Accuracy</td>
+            <td id="accuracy"></td>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td id="timestamp"></td>
+        </tr>
+    </table>
+    
+    <img class="location-icon" src="img/my-location-icon-4.png" alt="" onclick="getPosition()">
+    <button onclick="onReturnToMain(event)">back</button>
     <!-- 
-     The `defer` attribute causes the callback to execute after the full HTML
+        The `defer` attribute causes the callback to execute after the full HTML
      document has been parsed. For non-blocking uses, avoiding race conditions,
      and consistent behavior across browsers, consider loading using Promises
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
