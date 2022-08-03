@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png">
     <title>Place Keeper - My Map</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="js/service/placeService.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZgpQ_vg2i1aM6vvhrzJgfBnNAQd02fD8&callback=initMap"></script>
+    <script src="js/service/placeService.js"></script>
+    <script src="js/service/storageService.js"></script>
+    <script src="js/service/userService.js"></script>
+    <script src="js/main.controller.js"></script>
 </body>
 </html>
